@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(60, 179, 113);
+    color: rgb(120, 120, 120);
+}
+.weather-container {
+    margin-top: 20px;
+}
+.weather-day {
+    margin-bottom: 30px;
+}
+.forecast-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.weather-card {
+    background-color: rgb(109, 206, 255);
+    border: 1px solid #dddddd;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px; /* Зменшено ширину карток до 200px */
+    margin: 0 auto; /* Додаємо автоматичні поля для центрування */
+}
+.weather-card h3 {
+    margin-top: 0;
+}

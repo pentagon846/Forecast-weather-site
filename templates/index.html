@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather forecast for 4 days</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <h1>Weather forecast for 4 days</h1>
+    <form method="POST">
+        <label for="city">Enter your city:</label>
+        <input type="text" id="city" name="city" required>
+        <button type="submit">Get weather</button>
+    </form>
+
+    {% if weather_data %}
+        <h2>Forecast for {{ city }}</h2>
+        <div class="weather-container">
+            {% for i in range(0, weather_data|length, 8) %}
+            <div class="weather-day">
+                <h2>Day {{ loop.index }}</h2>
+                <div class="forecast-group">
+                    {% for forecast in weather_data[i:i+8] %}
+                    <div class="weather-card">
+                        <h3>{{ forecast.date }}</h3>
+                        <p>Temperature: {{ forecast.temperature }}°C</p>
+                        <p>{{ forecast.description }}</p>
+                        <img src="http://openweathermap.org/img/wn/{{ forecast.icon }}@2x.png" alt="Weather icon">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% elif city %}
+        <p>Failed to get weather data for city "{{ city }}".</p>
+    {% endif %}
+</body>
+</html>
