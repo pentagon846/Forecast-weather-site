@@ -34,7 +34,7 @@ def get_weather(city):
             forecast_data = forecast_response.json()
             forecast_message = []
 
-            forecast_list = forecast_data["list"]  # Беремо лише перші 4 записи
+            forecast_list = forecast_data["list"]
             for forecast in forecast_list:
                 dt_txt = forecast["dt_txt"]
                 main = forecast["main"]
@@ -42,7 +42,6 @@ def get_weather(city):
                 temp = main['temp']
                 icon_code = forecast["weather"][0]["icon"]
 
-                # Додаємо кожен прогноз до списку
                 forecast_message.append({
                     'date': dt_txt,
                     'temperature': temp,
@@ -59,9 +58,15 @@ def index():
     city = None
     if request.method == 'POST':
         city = request.form.get('city')
-        city, weather_data = get_weather(city)
+        if city:
+            result = get_weather(city)
+            if result:
+                city, weather_data = result
+            else:
+                weather_data = None
+
     return render_template('index.html', weather_data=weather_data, city=city)
 
 
-if __name__== '__main__':
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True, port=8080)
