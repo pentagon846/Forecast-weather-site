@@ -20,8 +20,8 @@ body {
     border: 1px solid #dddddd;
     padding: 20px;
     border-radius: 10px;
-    width: 500px; /* Зменшено ширину карток до 200px */
-    margin: 0 auto; /* Додаємо автоматичні поля для центрування */
+    width: 500px; /* reduce the card's 200px */
+    margin: 0 auto; /* add auto center */
 }
 .weather-card h3 {
     margin-top: 0;
