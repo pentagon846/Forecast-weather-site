@@ -17,7 +17,8 @@ A valid API key from a weather service provider (e.g., OpenWeatherMap, WeatherAP
 Installation
 Clone the repository:
 
-git clone https://github.com/your-username/weather-flask-app.git
+git clone [(https://github.com/pentagon846/Forecast-weather-site.git)]
+
 cd weather-flask-app
 
 Create a virtual environment and activate it:
