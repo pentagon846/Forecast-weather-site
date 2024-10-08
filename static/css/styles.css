@@ -5,14 +5,17 @@ body {
     color: rgb(120, 120, 120);
 }
 .weather-container {
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*margin-top: 20px;*/
 }
 .weather-day {
     margin-bottom: 30px;
 }
 .forecast-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
 }
 .weather-card {
@@ -20,9 +23,60 @@ body {
     border: 1px solid #dddddd;
     padding: 20px;
     border-radius: 10px;
-    width: 500px; /* reduce the card's 200px */
-    margin: 0 auto; /* add auto center */
+    width: 150px; /* reduce the card's 200px */
+    /*margin: 0 auto; /* add auto center */
+    text-align: center;
 }
 .weather-card h3 {
     margin-top: 0;
+}
+
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 20px 0;
+}
+
+.news-article {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: calc(15% - 15px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.news-article h3 {
+    margin: 0 0 10px;
+    font-size: 1.25em;
+}
+
+
+.news-article h3 a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+
+.news-article h3 a:hover {
+    color: #0056b3;
+}
+
+
+.news-article p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95em;
+}
+
+
+.news-article:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
