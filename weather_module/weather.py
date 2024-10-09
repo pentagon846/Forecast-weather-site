@@ -1,4 +1,5 @@
 import requests
+from datetime import datetime
 
 
 def get_weather(city, weather_api_key):
@@ -30,6 +31,8 @@ def get_weather(city, weather_api_key):
             # print(forecast_list)
             for forecast in forecast_list:
                 dt_txt = forecast["dt_txt"]
+                forecast_date = datetime.strptime(dt_txt, "%Y-%m-%d %H:%M:%S")
+                day_of_week = forecast_date.strftime('%A')
                 main = forecast["main"]
                 description = forecast["weather"][0]["description"]
                 temp = main['temp']
@@ -37,12 +40,10 @@ def get_weather(city, weather_api_key):
 
                 forecast_message.append({
                     'date': dt_txt,
+                    'day_of_week': day_of_week,
                     'temperature': temp,
                     'description': description,
                     'icon': icon_code
                 })
             return name, forecast_message
         return None, None
-
-
-

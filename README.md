@@ -1,12 +1,12 @@
-🌦 Flask Weather Forecast Application
+# 🌦 Flask Weather Forecast Application
 This is a simple weather forecast web application built using the Flask framework. It provides a 4-day weather forecast for a specific location based on data from an external weather API.
 
-✨ Features
-4-day weather forecast for a selected location
-Simple and intuitive user interface
+# ✨ Features
+4-day weather forecast for a selected location 
+Simple and intuitive user interface 
 Real-time data fetched from an external weather API
 Mobile-friendly and responsive design
-🚀 Getting Started
+# 🚀 Getting Started
 Prerequisites
 Before running the project, make sure you have installed the following:
 
@@ -24,10 +24,10 @@ Create a virtual environment and activate it:
 
 python -m venv venv
 source venv/bin/activate  # For Linux/macOS
-# or
+or
 venv\Scripts\activate  # For Windows
 
-Install dependencies:
+### Install dependencies:
 
 pip install -r requirements.txt
 
@@ -42,10 +42,10 @@ Run the application:
 flask run
 
 
-🛠 Configuration
+# 🛠 Configuration
 The API configuration is stored in the .env file. Replace your_weather_api_key with your actual API key from the weather provider of your choice.
 
-🌎 Usage
+# 🌎 Usage
 Once the application is running, simply enter the name of a city in the input field, and it will fetch the weather forecast for the next 4 days.
 
 You will be able to see the following information for each day:
@@ -55,10 +55,10 @@ Weather description (sunny, cloudy, rainy, etc.)
 Wind speed
 Humidity
 
-🤝 Contributing
+# 🤝 Contributing
 Feel free to open issues or submit pull requests if you would like to improve the application. All contributions are welcome!
 
-📜 License
+# 📜 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
 
