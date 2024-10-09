@@ -16,17 +16,17 @@
     </form>
 
     {% if weather_data %}
-        <h2>Forecast for {{ city }}</h2>
-        <div class="weather-container">
-            {% for i in range(0, weather_data|length, 8) %}
-            <div class="weather-day">
-                <h2>Day {{ loop.index }}</h2>
-                <div class="forecast-group">
-                    {% for forecast in weather_data[i:i+8] %}
-                    <div class="weather-card">
-                        <h3>{{ forecast.date }}</h3>
-                        <p>Temperature: {{ forecast.temperature }}°C</p>
-                        <p>{{ forecast.description }}</p>
+    <h2>Forecast for {{ city }}</h2>
+    <div class="weather-container">
+        {% for i in range(0, weather_data|length, 8) %}
+        <div class="weather-day">
+            <h2>{{ weather_data[i].day_of_week }}</h2>  {# Виводимо назву дня тижня #}
+            <div class="forecast-group">
+                {% for forecast in weather_data[i:i+8] %}
+                <div class="weather-card">
+                    <h3>{{ forecast.date }}</h3>
+                    <p>Temperature: {{ forecast.temperature }}°C</p>
+                    <p>{{ forecast.description }}</p>
                         <img src="http://openweathermap.org/img/wn/{{ forecast.icon }}@2x.png" alt="Weather icon">
                     </div>
                     {% endfor %}

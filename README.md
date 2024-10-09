@@ -2,11 +2,11 @@
 This is a simple weather forecast web application built using the Flask framework. It provides a 4-day weather forecast for a specific location based on data from an external weather API.
 
 # ✨ Features
-4-day weather forecast for a selected location
-Simple and intuitive user interface
+4-day weather forecast for a selected location 
+Simple and intuitive user interface 
 Real-time data fetched from an external weather API
 Mobile-friendly and responsive design
-#🚀 Getting Started
+# 🚀 Getting Started
 Prerequisites
 Before running the project, make sure you have installed the following:
 
