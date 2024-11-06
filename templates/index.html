@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather forecast for 4 days</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="../static/css/styles.css">
 
 </head>
 <body>
-    <h1>Weather forecast for 4 days and top-news</h1>
+    <header>
+        <div class="header">
+        <h1>Weather forecast for 4 days and top-news</h1>
+        </div>
+        <ul>
+            <ul><a href="#">Home</a></ul>
+            <ul><a href="#">About</a></ul>
+            <ul><a href="#">Contact</a></ul>
+            <ul><a href="#">News</a></ul> 
+        </ul>
+    </header>
     <form method="POST">
-        <label for="city">Enter your city:</label>
+        <label for="city">Enter your city</label>
         <input type="text" id="city" name="city" required>
         <button type="submit">Get weather</button>
     </form>

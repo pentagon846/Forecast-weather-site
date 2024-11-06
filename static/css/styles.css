@@ -4,6 +4,97 @@ body {
     background-color: rgb(60, 179, 113);
     color: rgb(120, 120, 120);
 }
+header {
+    display: flex;
+    border-radius: 30px;
+    background-color: rgb(117, 184, 218); 
+    justify-content: left;
+}
+
+
+h1 {
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+ul {
+    display: inline-block;
+    list-style-type: none;
+    padding: 25px 10px 0px 0px;
+    margin-right: 0px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+ul a {
+    color: rgb(26, 14, 14);
+    text-decoration: none;
+    padding: 20px;
+    margin: 5px 20px;
+    border: 2px solid;
+    border-color: aqua;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+ul a:hover {
+    background-color: rgb(190, 214, 135);
+    color: rgb(46, 41, 41);
+
+}
+
+form  {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding: 40px;
+    border-radius: 8px;
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+    max-width: 500px;
+    margin: 0 auto;
+
+}
+
+form label {
+    color: #007BFF;
+    font-size: 16px;
+    text-align: start;
+    margin-right: 5px;
+    padding: 3px;
+}
+
+form input[type="text"] {
+    width: 50%;
+    padding: 3px;
+    margin-bottom: 25px;
+    border: 1px solid #1b1985;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+form button {
+    width: 25%;
+    padding: 3px;
+    background-color: #529ae7;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #4386d4;
+}
+
 .weather-container {
     display: flex;
     flex-wrap: wrap;
@@ -79,4 +170,31 @@ body {
 .news-article:hover {
     transform: translateY(-15px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width:768px) {
+    .weather-container, .forecast-group, .news-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .weather-card {
+        width: 60%;
+        margin-bottom: 15px;
+    }
+
+    .news-article {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .news-article h3 {
+        font-size: 1.1em;
+    }
+
+    .news-article p {
+        font-size: 0.9em;
+    }
 }
