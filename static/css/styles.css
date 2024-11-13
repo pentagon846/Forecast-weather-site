@@ -6,6 +6,7 @@ body {
 }
 header {
     display: flex;
+    margin-top: -7px;
     border-radius: 30px;
     background-color: rgb(117, 184, 218); 
     justify-content: left;
