@@ -56,7 +56,13 @@ news_api_key = os.getenv('NEWS_API_KEY')
 #         return None, None
 #
 #
-@app.route('/', methods=['GET', 'POST'])
+
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+
+@app.route('/index', methods=['GET', 'POST'])
 def index():
     weather_data = None
     city = None
@@ -66,6 +72,16 @@ def index():
         city, weather_data = get_weather(city, weather_api_key)
 
     return render_template('index.html', weather_data=weather_data, city=city, news=news)
+
+
+@app.route('/about')
+def about_us():
+    return render_template('about us.html')
+
+
+@app.route('/contacts')
+def contacts():
+    return render_template('contacts.html')
 
 
 if __name__ == '__main__':

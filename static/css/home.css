@@ -1,0 +1,52 @@
+header {
+    display: flex;
+    margin-top: -7px;
+    border-radius: 30px;
+    background-color: rgb(117, 184, 218);
+    justify-content: space-around;
+    
+}
+
+
+h1 {
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    margin-right: 150px;
+}
+
+nav {
+    margin-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 10px;
+    
+}
+
+nav ul li {
+    margin-right: 0px;
+    margin-left: 30px;
+    margin-top: 20px;
+    gap: 0px;
+    padding: 5px;
+    justify-content: left;
+    display: inline-block;
+    
+    
+}
+
+nav ul li a {
+    color: rgba(5, 11, 26, 0.651);
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 0px;
+}
+
+nav ul li a:hover {
+    color: white;
+}
