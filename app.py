@@ -76,7 +76,7 @@ def index():
 
 @app.route('/about')
 def about_us():
-    return render_template('about us.html')
+    return render_template('about_us.html')
 
 
 @app.route('/contacts')
