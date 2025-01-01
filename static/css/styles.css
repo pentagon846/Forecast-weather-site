@@ -175,27 +175,43 @@ form button:hover {
 
 
 
-@media (max-width:768px) {
-    .weather-container, .forecast-group, .news-container {
+@media (max-width: 768px) {
+    ul {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
 
-    .weather-card {
-        width: 60%;
-        margin-bottom: 15px;
+    ul a {
+        display: block;
+        margin: 5px auto;
+        width: 80%; /* Збільшення клікабельності */
     }
+}
 
-    .news-article {
-        width: 90%;
-        margin-bottom: 10px;
-    }
 
-    .news-article h3 {
-        font-size: 1.1em;
-    }
+h1 {
+    font-size: 24px; /* Менший заголовок для мобільних */
+}
 
-    .news-article p {
-        font-size: 0.9em;
-    }
+
+.weather-card {
+    padding: 10px;
+}
+
+.weather-card h3 {
+    font-size: 16px; /* Менший заголовок в картках */
+}
+
+
+.news-article {
+    padding: 10px;
+    font-size: 14px; /* Для більш компактного вигляду */
+}
+
+.news-article h3 {
+    font-size: 18px;
+}
+
+.news-article p {
+    font-size: 12px;
 }
