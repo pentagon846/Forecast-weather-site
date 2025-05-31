@@ -1,8 +1,20 @@
+body {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("/static/img/bgmain.webp");
+    background-size: cover;
+
+    color: rgb(120, 120, 120);
+
+}
+
 header {
     display: flex;
     margin-top: -7px;
-    border-radius: 30px;
-    background-color: rgb(117, 184, 218);
+    background-image: url("/static/img/bghome.png");
     justify-content: space-around;
     
 }
@@ -10,7 +22,7 @@ header {
 
 h1 {
     padding: 20px;
-    color: white;
+    color: rgb(58, 47, 47);
     font-size: 30px;
     margin-right: 150px;
 }
@@ -41,12 +53,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgba(5, 11, 26, 0.651);
+    color: rgba(58, 47, 47);
     text-decoration: none;
     font-size: 25px;
+    font-weight: bold;
     margin-right: 0px;
 }
 
 nav ul li a:hover {
-    color: white;
+    color: rgb(0, 0, 0);
 }
