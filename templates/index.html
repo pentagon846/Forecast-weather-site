@@ -8,16 +8,17 @@
 
 </head>
 <body>
-    <header>
-        <div class="header">
-        <h1>Weather forecast for 4 days and top-news</h1>
+    <header class="header">
+        <div class="header-container">
+        <h1 class="header-title">Weather forecast for 4 days and top-news</h1>
+        <ul class="header-menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about_us') }}">About</a></li>
+            <li><a href="{{ url_for('contacts') }}">Contact</a></li>
+            <li><a href="#">News</a></li>
+        </ul> 
         </div>
-        <ul>
-            <ul><a href="{{ url_for('home') }}">Home</a></ul>
-            <ul><a href="about">About</a></ul>
-            <ul><a href="contacts">Contact</a></ul>
-            <ul><a href="#">News</a></ul>
-        </ul>
+
     </header>
     <form method="POST">
         <label for="city">Enter your city</label>
@@ -28,25 +29,24 @@
     {% if weather_data %}
     <h2>Forecast for {{ city }}</h2>
     <div class="weather-container">
-        {% for i in range(0, weather_data|length, 8) %}
+        {% for day, forecasts in weather_data.items() %}
         <div class="weather-day">
-            <h2>{{ weather_data[i].day_of_week }}</h2>  {# Виводимо назву дня тижня #}
+            <h2>{{ day }}</h2>
             <div class="forecast-group">
-                {% for forecast in weather_data[i:i+8] %}
+                {% for forecast in forecasts %}
                 <div class="weather-card">
                     <h3>{{ forecast.date }}</h3>
                     <p>Temperature: {{ forecast.temperature }}°C</p>
                     <p>{{ forecast.description }}</p>
-                        <img src="http://openweathermap.org/img/wn/{{ forecast.icon }}@2x.png" alt="Weather icon">
-                    </div>
-                    {% endfor %}
+                    <img src="http://openweathermap.org/img/wn/{{ forecast.icon }}@2x.png" alt="Weather icon">
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
-    {% elif city %}
-        <p>Failed to get weather data for city "{{ city }}".</p>
-    {% endif %}
+        {% endfor %}
+    </div>
+{% endif %}
+
 
         <h2>Top-news headlines</h2>
     <div class="news-container">
@@ -57,8 +57,5 @@
         </div>
         {% endfor %}
     </div>
-
-
-
 </body>
 </html>
