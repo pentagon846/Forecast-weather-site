@@ -31,6 +31,8 @@ NTPClient timeClient(ntpUDP, "pool.ntp.org", 7200, 60000); // 7200 = UTC+2 (лі
 #define RELAY_PIN 14   // D5
 #define BUTTON_PIN 12  // D6
 
+
+
 // ---------- Durations (minutes) ----------
 int manualDuration  = 10;
 int morningDuration = 10;
