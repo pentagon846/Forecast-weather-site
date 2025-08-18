@@ -16,7 +16,7 @@ IPAddress staticIP(192, 168, 1, 150);
 IPAddress gateway (192, 168, 1, 1);
 IPAddress subnet  (255, 255, 255, 0);
 */
-
+  
 // ---------- OLED ----------
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 64
